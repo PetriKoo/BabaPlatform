@@ -12,9 +12,9 @@ public class BabaServer {
     private int iSocketPort = 6060;
         
     public BabaServer(Properties props) {
-        Runtime.getRuntime().addShutdownHook( new ShutdownHook(this) );
-        this.init();
+        Runtime.getRuntime().addShutdownHook( new ShutdownHook(this) );        
         iSocketPort = Integer.parseInt( props.getProperty("ServerPort") );
+        this.init();
     }
     
     private void init() {
